@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Schoko-Traum",
+    "slogan": "Der ultimative Schokoladengenuss, rein pflanzlich.",
+    "description": "Ein dekadenter Traum für alle Schokoladenliebhaber. Saftiger Schokoladenbiskuit trifft auf eine reichhaltige, cremige Schokoladen-Ganache und wird von zarten Schokoraspeln gekrönt. Ein unvergessliches Erlebnis, das beweist, dass veganer Genuss keine Grenzen kennt.",
+    "price": 34.90,
+    "ingredients": {
+      "Teig": "Reismehl, Maisstärke, rohes Kakaopulver, Rohrohrzucker, Sonnenblumenöl, Apfelessig, Haferdrink (glutenfrei), Weinsteinbackpulver, Natron, eine Prise Meersalz.",
+      "Füllung & Glasur": "Zartbitterschokolade (70% Kakaoanteil, Kakaobutter, Rohrohrzucker), Kokosmilch (Vollfett), Agavendicksaft.",
+      "Dekoration": "Geröstete Kakaonibs, Schokoraspel."
+    },
+    "allergens": "Vegan und glutenfrei. Enthält Schalenfrüchte (Hafer). Kann Spuren von Soja, Erdnüssen und anderen Nüssen enthalten.",
+    "nutrition": {
+      "Brennwert": "1650 kJ / 394 kcal",
+      "Fett": "22g",
+      "davon gesättigte Fettsäuren": "12g",
+      "Kohlenhydrate": "45g",
+      "davon Zucker": "28g",
+      "Eiweiß": "4g",
+      "Salz": "0,3g"
+    },
+    "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 5 Tage haltbar.",
+    "image": "/src/assets/productImg/Schoko-Traum.jpg",
+    "imgAlt": "Anschnitt eines saftigen, dunklen Schokoladenkuchens mit mehreren Schichten, überzogen mit einer glänzenden Ganache und Schokoraspeln auf einem weißen Teller.",
+    "url": "schoko-traum"
+  },
+  {
+    "name": "Himbeer-Wolke",
+    "slogan": "Zart und fruchtig, ein Genuss wie auf Wolken.",
+    "description": "Luftig-leichter Mandelbiskuit, gebettet auf eine feine Schicht aus fruchtiger Himbeerkonfitüre und umhüllt von einer zarten Joghurt-Creme. Die frischen Himbeeren auf der Spitze sorgen für eine perfekte Balance aus Süße und Säure. Ein Kuchen wie eine sanfte Sommerwolke.",
+    "price": 38.90,
+    "ingredients": {
+      "Teig": "Mandelmehl (entölt), Buchweizenmehl, Ahornsirup, Kokosöl, Leinsamen (geschrotet), Zitronensaft, Mineralwasser, Weinsteinbackpulver, eine Prise Meersalz.",
+      "Füllung & Creme": "Vegane Joghurtalternative (auf Sojabasis), Agavendicksaft, Agar-Agar, Zitronenabrieb, hausgemachte Himbeer-Konfitüre (Himbeeren, Chiasamen, Ahornsirup).",
+      "Dekoration": "Frische Himbeeren, gehackte Pistazien."
+    },
+    "allergens": "Vegan und glutenfrei. Enthält Schalenfrüchte (Mandeln, Pistazien) und Soja. Kann Spuren von Erdnüssen und anderen Nüssen enthalten.",
+    "nutrition": {
+      "Brennwert": "1420 kJ / 339 kcal",
+      "Fett": "18g",
+      "davon gesättigte Fettsäuren": "7g",
+      "Kohlenhydrate": "38g",
+      "davon Zucker": "25g",
+      "Eiweiß": "6g",
+      "Salz": "0,2g"
+    },
+    "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 4 Tage haltbar.",
+        "image": "/src/assets/productImg/Himbeer-Wolke.jpg",
+    "imgAlt": "Runde, helle Torte, reichlich garniert mit frischen Himbeeren. Ein Stück ist herausgeschnitten und zeigt die luftige Creme-Füllung.",
+    "url": "himbeer-wolke"
+  },
+  {
+    "name": "Karotten-Glück",
+    "slogan": "Klassisch, saftig, für die zarten Glücksgefühle.",
+    "description": "Unser saftiger Karottenkuchen ist ein wahrer Klassiker im neuen Gewand. Frisch geriebene Karotten, knackige Walnüsse und eine geheime Gewürzmischung mit Zimt und Muskat verleihen ihm sein unverwechselbares Aroma. Das cremige Frosting auf Basis von veganem Frischkäse rundet das Geschmackserlebnis perfekt ab.",
+    "price": 32.90,
+    "ingredients": {
+      "Teig": "Dinkelvollkornmehl, frische Karotten (30%), Rohrohrzucker, Sonnenblumenöl, Walnüsse, Rosinen (optional), Apfelmus, Zimt, Muskatnuss, Ingwerpulver, Weinsteinbackpulver, Natron.",
+      "Frosting": "Vegane Frischkäsealternative (auf Mandelbasis), Puderzucker, Zitronensaft, Vanilleextrakt.",
+      "Dekoration": "Gehackte Walnüsse, getrocknete Kornblumenblüten."
+    },
+    "allergens": "Vegan. Enthält glutenhaltiges Getreide (Dinkel) und Schalenfrüchte (Walnüsse, Mandeln). Kann Spuren von Soja und Erdnüssen enthalten.",
+    "nutrition": {
+      "Brennwert": "1580 kJ / 377 kcal",
+      "Fett": "20g",
+      "davon gesättigte Fettsäuren": "4g",
+      "Kohlenhydrate": "42g",
+      "davon Zucker": "29g",
+      "Eiweiß": "7g",
+      "Salz": "0,4g"
+    },
+    "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 6 Tage haltbar.",
+        "image": "/src/assets/productImg/Karotten-Glueck.jpg",
+    "imgAlt": "Ein Stück Karottenkuchen vor dem großen Kuchen, bedeckt mit einer dicken Schicht weißem Frosting und zerkleinerten Walnüssen. ",
+    "url": "karotten-glueck"
+  },
+
+
+ {
+    "name": "Zitronen-Frischekick Tarte",
+    "slogan": "Frisch und sommerlich, sorgt für den richtigen Kick!",
+    "description": "Erleben Sie den puren Frischekick! Auf einem knusprigen Mürbteigboden aus Mandeln und Hafer ruht eine intensiv-zitronige Creme, die auf der Zunge zergeht. Abgerundet wird diese Tarte durch eine Baiserhaube aus Aquafaba, die für eine überraschend leichte Süße sorgt. Ein sonniger Gruß aus unserer Backstube!",
+    "price": 36.90,
+    "ingredients": {
+      "Boden": "Haferflocken (glutenfrei), Mandelmehl, Kokosöl, Ahornsirup, eine Prise Salz",
+      "Füllung": "Seidentofu, frischer Zitronensaft (20%), Zitronenabrieb, Agavendicksaft, Maisstärke, Kurkuma (für die Farbe)",
+      "Topping": "Aquafaba (Kichererbsenwasser), Puderzucker, Weinstein, Zitronenabrieb"
+    },
+"allergens": "Vegan und glutenfrei. Enthält Schalenfrüchte (Mandeln), Soja (Tofu) und Hülsenfrüchte (Kichererbsen). Kann Spuren von Erdnüssen und anderen Nüssen enthalten, da diese in unserer Backstube verarbeitet werden",
+    "nutrition": {
+      "Brennwert": "1350 kJ / 322 kcal",
+      "Fett": "17g",
+      "davon gesättigte Fettsäuren": "8g",
+      "Kohlenhydrate": "35g",
+      "davon Zucker": "22g",
+      "Eiweiß": "7g",
+      "Salz": "0,2g"
+    },
+    "storage": "Unbedingt im Kühlschrank bei 2-5°C lagern. Nach Erhalt mindestens 4 Tage haltbar. Am besten gekühlt genießen.",
+        "image": "/src/assets/productImg/Zitronen-Frischekick.jpg",
+    "imgAlt": "Goldgelbe Zitronentarte in einer runden Form mit einem knusprigen Rand und einer kunstvoll aufgespritzten, an den Spitzen gebräunten Baiserhaube.",
+    "url": "zitronen-frischekick"
+  },
+{
+  "name": "Schwarzwälder Kirsch-Zauber",
+  "slogan": "Ein Klassiker in neuer Konstellation.",
+  "description": "Ein deutscher Klassiker, neu interpretiert. Fluffige, dunkle Schokoladenböden, getränkt mit einem Hauch Kirschwasser, schichten sich mit einer leichten Kokos-Sahnecreme und einer fruchtigen Füllung aus Sauerkirschen. Umhüllt von Schokoladenraspeln ist dieser Kuchen eine Hommage an die Tradition – nur eben rein pflanzlich und glutenfrei.",
+  "price": 39.90,
+  "ingredients": {
+    "Böden": "Glutenfreie Mehlmischung (Reis, Tapioka, Mais), rohes Kakaopulver, Rohrohrzucker, Sonnenblumenöl, Mandeldrink, Apfelessig, Kirschwasser",
+    "Füllung & Creme": "Gekühlte Kokosmilch (Vollfett), Sauerkirschen, Puderzucker, Agar-Agar, Vanilleextrakt",
+    "Dekoration": "Zartbitter-Schokoladenraspeln, frische Kirschen (saisonal)"
+  },
+  "allergens": "Dieses Produkt ist vegan und glutenfrei. Enthält Alkohol (Kirschwasser) und Schalenfrüchte (Mandeln). Kann Spuren von Soja und anderen Nüssen enthalten, da diese in unserer Backstube verarbeitet werden.",
+  "nutrition": {
+    "Brennwert": "1590 kJ / 380 kcal",
+    "Fett": "21g",
+    "davon gesättigte Fettsäuren": "14g",
+    "Kohlenhydrate": "43g",
+    "davon Zucker": "29g",
+    "Eiweiß": "4g",
+    "Salz": "0,3g"
+  },
+  "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 4 Tage haltbar.",
+      "image": "/src/assets/productImg/Schwarzwälder-Kirsch-Zauber.jpg",
+    "imgAlt": "Mehrschichtige, runde Schwarzwälder Kirschtorte mit dunklen Schokoböden, weißen Sahneschichten, eingelegten Kirschen und dunkler Schokoganache, sowie Kirschen oben drauf.",
+  "url": "schwarzwalder-kirsch-zauber"
+},
+{
+  "name": "Erdnuss-Schoko-Sinfonie",
+  "slogan": "Cremig süß, mit salziger Note. Achtung: Suchtpotenzial!",
+  "description": "Die perfekte Sinfonie aus süß und salzig. Ein unglaublich saftiger Schokoladenkuchen trifft auf Schichten einer samtigen Erdnussbutter-Creme. Gekrönt wird dieses Meisterwerk von einem Schokoladen-Ganache-Drip, gerösteten Erdnüssen und einem Hauch Meersalz. Achtung: höchstes Suchtpotenzial!",
+  "price": 35.90,
+  "ingredients": {
+    "Teig": "Weizenmehl (Type 550), Rohrohrzucker, Kakaopulver, Sonnenblumenöl, Haferdrink, Apfelessig, Natron, eine Prise Salz",
+    "Creme & Ganache": "Vegane Butteralternative, Erdnussbutter (100% Erdnuss), Puderzucker, Zartbitterschokolade, Kokosmilch",
+    "Dekoration": "Geröstete und gesalzene Erdnüsse"
+  },
+  "allergens": "Dieses Produkt ist vegan. Enthält glutenhaltiges Getreide (Weizen), Erdnüsse und Schalenfrüchte (Hafer). Kann Spuren von Soja und anderen Nüssen enthalten.",
+  "nutrition": {
+    "Brennwert": "1750 kJ / 418 kcal",
+    "Fett": "25g",
+    "davon gesättigte Fettsäuren": "9g",
+    "Kohlenhydrate": "40g",
+    "davon Zucker": "28g",
+    "Eiweiß": "8g",
+    "Salz": "0,5g"
+  },
+  "storage": "Im Kühlschrank bei 4-7°C lagern. Nach Erhalt mindestens 6 Tage haltbar. Für das beste Geschmackserlebnis ca. 20 Minuten vor dem Verzehr aus dem Kühlschrank nehmen.",
+      "image": "/src/assets/productImg/Erdnuss-Schoko-Sinfonie.jpg",
+    "imgAlt": "Mehrschichtiger Kuchen mit dicken Schichten heller Erdnussbutter-Creme, garniert mit einer dunklen Schokoladenglasur und gerösteten Erdnüssen.",
+  "url": "erdnuss-schoko-sinfonie"
+},
+{
+  "name": "Mango-Maracuja-Sommertraum",
+  "slogan": "Eine tropische Sünde für verspielte Gaumen.",
+  "description": "Holen Sie sich die Tropen nach Hause! Eine exotische Komposition aus samtiger Mango-Creme und einer fruchtig-säuerlichen Maracuja-Schicht auf einem knackigen Kokos-Dattel-Boden. Diese Torte wird nicht gebacken und ist dadurch besonders frisch und cremig. Ein purer Genuss, der von Urlaub träumen lässt.",
+  "price": 41.90,
+  "ingredients": {
+    "Boden": "Datteln, Kokosraspeln, eine Prise Meersalz",
+    "Füllung": "Cashewkerne (eingeweicht), Mangopüree (35%), Kokosmilch (Vollfett), frischer Maracujasaft (10%), Ahornsirup, Limettensaft",
+    "Dekoration": "Frische Passionsfrucht, Kokoschips"
+  },
+  "allergens": "Dieses Produkt ist vegan, glutenfrei und ohne raffinierten Zucker. Enthält Schalenfrüchte (Cashewkerne). Kann Spuren von Erdnüssen, Soja und anderen Nüssen enthalten.",
+  "nutrition": {
+    "Brennwert": "1480 kJ / 354 kcal",
+    "Fett": "24g",
+    "davon gesättigte Fettsäuren": "15g",
+    "Kohlenhydrate": "29g",
+    "davon Zucker": "24g",
+    "Eiweiß": "5g",
+    "Salz": "0,1g"
+  },
+  "storage": "Unbedingt im Kühlschrank bei 2-5°C lagern. Nach Erhalt mindestens 5 Tage haltbar. Da es sich um eine Rohkosttorte handelt, ist sie besonders empfindlich gegenüber Wärme.",
+      "image": "/src/assets/productImg/Mango-Maracuja-Sommertraum.jpg",
+    "imgAlt": "Leuchtend gelbes Stück einer cremigen Mango-Torte auf einem dunklen Keksboden, garniert mit einem Sahnehäubchen.",
+  "url": "mango-maracuja-sommertraum"
+},
+{
+  "name": "Haselnuss-Mokka-Kuss",
+  "slogan": "Ein schokoladiges Dessert für Nussliebhaber.",
+  "description": "Für alle Kaffee-Junkies und Nuss-Verehrer. Aromatische Mokka-Böden treffen auf eine vollmundige Creme aus gerösteten Haselnüssen. Jede Gabel ist ein harmonisches Zusammenspiel von kräftigem Kaffee und der natürlichen Süße der Haselnuss. Gekrönt mit ganzen Nüssen und einem Hauch von Kakaopulver.",
+  "price": 37.90,
+  "ingredients": {
+    "Teig": "Weizenmehl (Type 550), starker Espresso, Rohrohrzucker, Rapsöl, Haferdrink, Kakaopulver, Weinsteinbackpulver",
+    "Creme": "Vegane Butteralternative, Haselnussmus (15%), Puderzucker, ein Schuss kalter Espresso",
+    "Dekoration": "Geröstete ganze Haselnüsse, Kakaopulver"
+  },
+  "allergens": "Dieses Produkt ist vegan. Enthält glutenhaltiges Getreide (Weizen) und Schalenfrüchte (Haselnüsse, Hafer). Kann Spuren von Soja und anderen Nüssen enthalten.",
+  "nutrition": {
+    "Brennwert": "1790 kJ / 428 kcal",
+    "Fett": "26g",
+    "davon gesättigte Fettsäuren": "8g",
+    "Kohlenhydrate": "44g",
+    "davon Zucker": "30g",
+    "Eiweiß": "6g",
+    "Salz": "0,3g"
+  },
+  "storage": "Im Kühlschrank bei 4-7°C lagern. Nach Erhalt mindestens 6 Tage haltbar.",
+      "image": "/src/assets/productImg/Haselnuss-Mokka-Kuss.jpg",
+    "imgAlt": " Ein Stück Haselnuss-Mokka-Kuchen von hinten, mit dunkler Kaffeecreme, dekoriert mit ganzen Haselnüssen.",
+  "url": "haselnuss-mokka-kuss"
+},
+{
+  "name": "Apfel-Streusel-Liebe",
+  "slogan": "Ein Stückchen Kindheit wie bei Oma.",
+  "description": "Ein Stück Kindheitserinnerung und Behaglichkeit. Saftige, leicht säuerliche Apfelstücke mit einer feinen Zimtnote auf einem zarten Mürbeteigboden, bedeckt von einer großzügigen Schicht knuspriger Streusel. Schmeckt wie bei Oma, nur eben rein pflanzlich. Perfekt für die gemütliche Kaffeetafel.",
+  "price": 33.90,
+  "ingredients": {
+    "Boden & Streusel": "Dinkelmehl (Type 630), vegane Butteralternative, Rohrohrzucker, Zimt, eine Prise Salz",
+    "Füllung": "Äpfel der Sorte Boskop (50%), Zitronensaft, Ahornsirup, Rosinen (optional), Maisstärke"
+  },
+  "allergens": "Dieses Produkt ist vegan. Enthält glutenhaltiges Getreide (Dinkel). Kann Spuren von Soja und Nüssen enthalten.",
+  "nutrition": {
+    "Brennwert": "1250 kJ / 298 kcal",
+    "Fett": "12g",
+    "davon gesättigte Fettsäuren": "5g",
+    "Kohlenhydrate": "43g",
+    "davon Zucker": "21g",
+    "Eiweiß": "4g",
+    "Salz": "0,2g"
+  },
+  "storage": "Kühl und trocken lagern. Nach Erhalt mindestens 5 Tage haltbar. Schmeckt am besten bei Raumtemperatur.",
+      "image": "/src/assets/productImg/Apfel-Streusel-Liebe.jpg",
+    "imgAlt": "Saftiger runder Apfelkuchen, angeschnitten, mit einer dicken, goldbraunen Decke aus knusprigen Streuseln. ",
+  "url": "apfel-streusel-liebe"
+},
+{
+  "name": "Pistazien-Rosen-Torte",
+  "slogan": "Ein romantisches Dessert - ideal zum Teilen mit deinen Liebsten.",
+  "description": "Eine Torte wie aus Tausendundeiner Nacht. Feine, saftige Böden aus gemahlenen Pistazien und Mandeln, verfeinert mit einem Hauch Kardamom. Dazwischen eine zarte Creme, parfümiert mit edlem Rosenwasser. Eine elegante und außergewöhnliche Kreation, dekoriert mit gehackten Pistazien und essbaren Rosenblättern.",
+  "price": 42.90,
+  "ingredients": {
+    "Böden": "Pistazien (gemahlen, 25%), Mandelmehl, Reismehl, Agavendicksaft, Rapsöl, Sojadrink, Kardamom",
+    "Creme": "Vegane Frischkäsealternative, Puderzucker, Rosenwasser (naturrein), Zitronensaft",
+    "Dekoration": "Gehackte Pistazienkerne, getrocknete Rosenblüten"
+  },
+  "allergens": "Dieses Produkt ist vegan und glutenfrei. Enthält Schalenfrüchte (Pistazien, Mandeln) und Soja. Kann Spuren von Erdnüssen und anderen Nüssen enthalten.",
+  "nutrition": {
+    "Brennwert": "1680 kJ / 402 kcal",
+    "Fett": "28g",
+    "davon gesättigte Fettsäuren": "6g",
+    "Kohlenhydrate": "30g",
+    "davon Zucker": "22g",
+    "Eiweiß": "9g",
+    "Salz": "0,3g"
+  },
+  "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 5 Tage haltbar.",
+      "image": "/src/assets/productImg/Pistazien-Rosen-Torte.jpg",
+    "imgAlt": "Eckige, helle Torte mit einem rechteckig herausgeschnittenen Tortenstück, verziert mit gehackten Pistazien und zarten rosa Rosenblättern.",
+  "url": "pistazien-rosen-torte"
+}
+]

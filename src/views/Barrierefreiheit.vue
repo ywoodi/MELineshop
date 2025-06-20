@@ -1,101 +1,133 @@
 <template>
-  <section class="accessibility-statement">
-    <h1>Barrierefreiheitserklärung</h1>
-
+  <main class="barrierefreiheit-page">
+    <h1>Erklärung zur Barrierefreiheit</h1>
+    <p><strong>Stand:</strong> 19. Juni 2025</p>
     <p>
-      Diese Erklärung zur Barrierefreiheit gilt für die Website 
-      <strong>{{ websiteName }}</strong> unter der Adresse 
-      <a :href="websiteUrl">{{ websiteUrl }}</a>.
+      VeganAkes e.U. ist bemüht, die Website <a href="https://www.veganakes.at" target="_blank" rel="noopener">www.veganakes.at</a> im Einklang mit dem Web-Zugänglichkeits-Gesetz (WZG) zur Umsetzung der Richtlinie (EU) 2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen.
+    </p>
+    <p>
+      Unser Ziel ist es, allen Menschen, unabhängig von ihren technischen oder körperlichen Fähigkeiten, einen uneingeschränkten Zugang zu unseren Produkten und Informationen zu ermöglichen.
     </p>
 
-    <h2>Stand der Vereinbarkeit mit den Anforderungen</h2>
-    <p>
-      Diese Website ist <strong>teilweise mit den Anforderungen der Web-Zugänglichkeits-Richtlinie (WZG)</strong> in der derzeit geltenden Fassung vereinbar.
-    </p>
+    <section>
+      <h2>1. Stand der Konformität mit den Anforderungen</h2>
+      <p>
+        Diese Website ist wegen der nachstehend angeführten Unvereinbarkeiten teilweise konform mit der Konformitätsstufe AA der „Richtlinien für barrierefreie Webinhalte – WCAG 2.2“.
+        Wir arbeiten kontinuierlich daran, alle Inhalte so zugänglich wie möglich zu gestalten.
+      </p>
+    </section>
 
-    <h2>Erstellung der Erklärung</h2>
-    <p>
-      Diese Erklärung wurde am {{ creationDate }} erstellt. Grundlage war eine {{ evaluationMethod }}.
-    </p>
+    <section>
+      <h2>2. Nicht barrierefreie Inhalte</h2>
+      <p>Die nachstehend angeführten Inhalte sind aus folgenden Gründen noch nicht vollständig barrierefrei:</p>
+      <ol type="a">
+        <li>
+          <strong>Unverhältnismäßige Belastung</strong><br />
+          Derzeit sind uns keine Mängel bekannt, die unter die unverhältnismäßige Belastung fallen würden. Sollten uns solche bekannt werden, werden sie hier angeführt.
+        </li>
+        <li>
+          <strong>Inhalte, die nicht in den Anwendungsbereich der Rechtsvorschriften fallen</strong><br />
+          Inhalte von Dritten: Auf unserer Website können Inhalte von Drittanbietern eingebunden sein, die nicht in unserem direkten Einflussbereich liegen und möglicherweise nicht vollständig barrierefrei sind. Dazu können gehören:
+          <ul>
+            <li>Kartenmaterial: Eine eventuell zur Standortanzeige eingebundene interaktive Karte (z.B. Google Maps).</li>
+            <li>Zahlungsdienstleister: Eingebettete Formulare oder Weiterleitungen zu externen Zahlungsanbietern im Check-out-Prozess.</li>
+          </ul>
+          Wir bemühen uns, bei der Auswahl von Drittanbieter-Tools auf deren Zugänglichkeit zu achten.
+        </li>
+      </ol>
+    </section>
 
-    <h2>Nicht barrierefreie Inhalte</h2>
-    <ul>
-      <li v-for="(item, index) in issues" :key="index">
-        {{ item }}
-      </li>
-    </ul>
+    <section>
+      <h2>3. Erstellung dieser Erklärung zur Barrierefreiheit</h2>
+      <p>
+        Diese Erklärung wurde am 19. Juni 2025 erstellt.<br />
+        Die Bewertung der Konformität der Website wurde durch eine Selbstbewertung unseres Unternehmens auf Basis der WCAG 2.2 AA-Kriterien durchgeführt.
+      </p>
+    </section>
 
-    <h2>Kontakt und Feedback-Möglichkeit</h2>
-    <p>
-      Wenn Ihnen Barrieren auffallen oder Sie Informationen benötigen, die derzeit nicht barrierefrei verfügbar sind, kontaktieren Sie uns bitte:
-    </p>
-    <address>
-      <strong>{{ organization }}</strong><br>
-      {{ address }}<br>
-      E-Mail: <a :href="`mailto:${email}`">{{ email }}</a><br>
-      Telefon: <a :href="`tel:${phone}`">{{ phone }}</a>
-    </address>
+    <section>
+      <h2>4. Feedback und Kontaktangaben</h2>
+      <p>
+        Sollten Ihnen Barrieren auffallen, die Sie an der Nutzung unserer Website hindern – Probleme, die in dieser Erklärung nicht beschrieben sind, oder Mängel in Bezug auf die Einhaltung der Barrierefreiheitsanforderungen – bitten wir Sie, uns diese mitzuteilen.
+      </p>
+      <p>
+        Ihr Feedback ist ein wichtiger Teil unseres Verbesserungsprozesses. Bitte kontaktieren Sie uns per E-Mail und beschreiben Sie das Problem so genau wie möglich:
+      </p>
+      <ul>
+        <li>
+          E-Mail: <a href="mailto:barrierefreiheit@veganakes.at">barrierefreiheit@veganakes.at</a>
+        </li>
+        <li>Betreff: Meldung einer Barriere auf www.veganakes.at</li>
+      </ul>
+      <p>
+        Wir werden Ihre Anfrage sorgfältig prüfen und uns bemühen, die gemeldete Barriere zeitnah zu beheben.
+      </p>
+    </section>
 
-    <h2>Durchsetzungsverfahren</h2>
-    <p>
-      Wenn Sie mit unserer Antwort nicht zufrieden sind, können Sie sich an die 
-      <strong>Beschwerdestelle für digitale Barrierefreiheit der Republik Österreich</strong> wenden:
+    <section>
+      <h2>5. Durchsetzungsverfahren</h2>
+      <p>
+        Sollten Sie mit der Antwort aus der oben genannten Kontaktmöglichkeit nicht zufrieden sein, können Sie sich an die Österreichische Forschungsförderungsgesellschaft mbH (FFG) wenden. Die FFG betreibt die Beschwerdestelle für digitale Barrierefreiheit.
+      </p>
+      <p>
+        Die Beschwerden werden dahingehend geprüft, ob sie sich auf Verstöße gegen die Vorgaben des Web-Zugänglichkeits-Gesetzes beziehen. Sofern die Beschwerde berechtigt ist, hat die Beschwerdestelle Handlungsempfehlungen auszusprechen und Maßnahmen vorzuschlagen, die der Beseitigung der vorliegenden Mängel dienen.
+      </p>
+      <p>
+        Weitere Informationen zum Beschwerdeverfahren und das Kontaktformular finden Sie auf der Website der FFG: <a href="https://www.ffg.at/digitale-barrierefreiheit" target="_blank" rel="noopener">www.ffg.at/digitale-barrierefreiheit</a>
+      </p>
+    </section>
+
+    <p class="note">
+      <strong>Wichtig:</strong> Diese Erklärung sollte, wie auch Impressum und AGB, von jeder Seite Ihrer Website aus leicht erreichbar sein, z.B. im Footer.
     </p>
-    <address>
-      Unabhängige Bundes-Behindertenanwaltschaft<br>
-      Babenbergerstraße 5, 1010 Wien<br>
-      E-Mail: <a href="mailto:post@behindertenanwalt.gv.at">post@behindertenanwalt.gv.at</a><br>
-      Website: <a href="https://www.behindertenanwalt.gv.at" target="_blank" rel="noopener">www.behindertenanwalt.gv.at</a>
-    </address>
-  </section>
+  </main>
 </template>
 
-<script setup>
-const websiteName = 'Beispielseite'
-const websiteUrl = 'https://www.beispielseite.at'
-const creationDate = '16. Juni 2025'
-const evaluationMethod = 'Selbstbewertung'
-
-const issues = [
-  'Bestimmte PDF-Dokumente sind nicht barrierefrei.',
-  'Alternativtexte für Bilder sind teilweise unvollständig.',
-  'Die Tastaturbedienbarkeit einzelner interaktiver Elemente ist eingeschränkt.'
-]
-
-const organization = 'Beispiel GmbH'
-const address = 'Musterstraße 1, 1010 Wien'
-const email = 'kontakt@beispielseite.at'
-const phone = '+4312345678'
+<script>
+export default {
+  name: "BarrierefreiheitErklaerung",
+};
 </script>
 
 <style scoped>
-.accessibility-statement {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  line-height: 1.7;
-  font-size: 1rem;
-  color: #111827;
+.barrierefreiheit-page {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
 }
 
-h1, h2 {
-  color: #1e3a8a;
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
-  color: #2563eb;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
   text-decoration: underline;
+  outline: none;
 }
 
-a:focus,
-a:hover {
-  color: #1e40af;
-  outline: 2px solid #93c5fd;
-  outline-offset: 2px;
+ol {
+  padding-left: 1.5rem;
 }
 
-address {
-  font-style: normal;
-  margin-bottom: 2rem;
+.note {
+  margin-top: 3rem;
+  font-weight: bold;
+  color: #555;
 }
 </style>

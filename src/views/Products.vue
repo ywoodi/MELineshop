@@ -5,31 +5,35 @@ import ProductCard from '../components/ProductCard.vue'
 const products = ref([])
 
 onMounted(async () => {
-  const response = await import('../assets/productData.json')
+  const response = await import('../assets/data/productData.json')
   products.value = response.default
 })
+
 </script>
 
+
 <template>
-<h1>Hello Products</h1>
+  <h1>Hello Products</h1>
   <section class="product-grid">
     <ProductCard
       v-for="product in products"
       :key="product.url"
       :name="product.name"
-      :description="product.description"
-      :price="product.price"
+      :slogan="product.slogan"
+      :price="Number(product.price).toFixed(2).replace('.', ',')"
       :image="product.image"
+      :imgAlt="product.imgAlt"
       :url="product.url"
     />
   </section>
 </template>
 
-
-
-
-
 <style scoped>
+
+section {
+  background-color: transparent;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

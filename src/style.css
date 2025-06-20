@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Host%20Grotesk:700|Host%20Grotesk:400');
+:root {
+--text: #070c0b;
+--background-dark: #e9dcd3;
+--background-light: #fff8f4;
+--primary: #b87642;
+--accent: #842c03;
+--secondary: #d5c2b1;
+
+/* --text: #080d0c;
+--background-light: #fff9f5;
+--background-dark: #e9dcd3;
+--primary: #ea8e45;
+--secondary: #da9f71;
+--accent: #812b03; */
+
+}
+
+
+
+body {
+  font-family: 'Host Grotesk';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Host Grotesk';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text);
+}
+
+header, footer {
+  background-color: var(--background-light);
+}
+
+header {
+  border-bottom: var(--primary) 4px solid;
+}
+
+blockquote > footer {
+  padding-left: 50px;
+  background-color: transparent;
+}
+
+section {
+  background-color: var(--background-light);
+  padding: 50px;
+  margin: 50px 0;
+  border-radius: 7px;
+}
+
+
+
+h1, h2 {
+  color: var(--accent);
+}
+
+h3 {
+  color: var(--primary);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+/* Base button reset */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  line-height: 1.4;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Focus-visible styles for keyboard navigation */
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--background-light);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent);
+  color: var(--background-light);
+}
+
+.btn-primary:active {
+  background-color: var(--accent);
+  opacity: 0.9;
+}
+
+/* Secondary btn */
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--primary);
+  color: var(--background-light);
+}
+
+.btn-secondary:active {
+  background-color: var(--primary);
+  opacity: 0.9;
+}
+
+/* Navigation btn */
+.btn-nav {
+  background: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+}
+
+.btn-nav:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+
+.btn-nav:focus {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-nav:active {
+  color: var(--accent);
+}
+
+/* Footer btn (minimal) */
+.btn-footer {
+  background: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+
+.btn-footer:hover,
+.btn-footer:focus {
+  color: var(--accent);
+}
+
+.btn-footer:active {
+  color: var(--accent);
+}
+
+
+
+/* 
+
+.product-link, button, .btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary); 
+  color: var(--background);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.product-link:hover, button:hover,
+.product-link:focus, button:focus, .btn-primary:hover, .btn-primary:focus{
+  background-color: var(--accent); 
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.product-link:focus, button:focus, .btn-primary:focus {
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.btn-secondary {
+    background-color: var(--background);
+    border: solid 1px var(--primary);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: color-mix(in srgb, var(--primary) 100%, transparent 90%);
+    border: solid 1px var(--primary);
+}
+
+.btn-secondary {
+    background-color: var(--background);
+    border: solid 1px var(--primary);
+} */

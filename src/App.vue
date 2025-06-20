@@ -8,34 +8,70 @@ function navigateTo(path) {
 </script>
 
 <template>
+  <!-- Skip Link -->
+  <a href="#content" class="skip-link">Zum Inhalt springen</a>
+
   <header>
     <nav aria-label="Main Navigation">
       <div class="container">
-        <h1 class="logo">MyShop</h1>
+        <router-link to="/">
+          <img
+            src="/src/assets/branding/Bildmarke.png"
+            alt="Bildmarke des Unternehmens 'Vegan Akes'"
+            class="logo"
+          />
+        </router-link>
         <ul class="nav-list">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/products">Products</router-link></li>
-          <li><router-link to="/cart">Cart</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
+          <li>
+            <router-link to="/products" class="btn btn-nav"
+              >Products</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/cart" class="btn btn-nav">Cart</router-link>
+          </li>
+          <li>
+            <router-link to="/about" class="btn btn-nav">Über</router-link>
+          </li>
+
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="content">
     <router-view />
   </main>
 
   <footer>
     <div class="container">
       <ul class="footer-list">
-        <li><router-link to="/imprint">Impressum</router-link></li>
-        <li><router-link to="/dataprotection">Datenschutz</router-link></li>
-        <li><router-link to="/license">Lizenz</router-link></li>
-        <li><router-link to="/accessibility">Barrierefreiheit</router-link></li>
+        <li>
+          <router-link to="/imprint" class="btn btn-footer"
+            >Impressum</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/dataprotection" class="btn btn-footer"
+            >Datenschutz</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/license" class="btn btn-footer">Lizenz</router-link>
+        </li>
+        <li>
+          <router-link to="/accessibility" class="btn btn-footer"
+            >Barrierefreiheit</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/contact" class="btn btn-footer"
+            >Kontakt</router-link
+          >
+        </li>
       </ul>
       <p class="copyright">
-        &copy; {{ new Date().getFullYear() }} MyShop. All rights reserved.
+        &copy; {{ new Date().getFullYear() }} VeganAkes e.U. | Alle Rechte vorbehalten.
       </p>
     </div>
   </footer>
@@ -52,26 +88,18 @@ function navigateTo(path) {
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-  background: #f7f9fc;
   color: #333;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Header & Navigation */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
-
 .logo {
-  font-size: 1.5rem;
-  color: #004080;
   margin-right: auto;
+  width: 85px;
 }
 
 .nav-list {
@@ -89,7 +117,7 @@ nav .container {
   justify-content: space-between;
 }
 
-a {
+/* a {
   color: #004080;
   text-decoration: none;
   font-weight: 500;
@@ -104,7 +132,7 @@ a:focus {
   color: #002f5e;
   outline: 2px solid #004080;
   outline-offset: 2px;
-}
+} */
 
 /* Main content */
 main {
@@ -113,7 +141,6 @@ main {
 
 /* Footer */
 footer {
-  background: #ffffff;
   border-top: 1px solid #ddd;
   margin-top: 3rem;
   padding: 2rem 0;
@@ -133,20 +160,20 @@ footer {
   margin: 0;
 }
 
-footer a {
+/* footer a {
   font-size: 0.9rem;
 }
 
 footer a:hover,
 footer a:focus {
   background: #f0f4fa;
-}
+} */
 
-footer p {
+/* footer p {
   font-size: 0.85rem;
-  color: #666;
+  color: #ede5e5;
   margin-top: 1rem;
-}
+} */
 
 /* Responsive navigation */
 @media (max-width: 768px) {
@@ -165,5 +192,25 @@ footer p {
   .logo {
     margin-bottom: 0.5rem;
   }
+}
+
+/* Visually hidden skip link until focus */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  background: #000;
+  color: #fff;
+  z-index: 1000;
 }
 </style>

@@ -12,6 +12,7 @@ import Lizenz from './views/Lizenz.vue';
 import Impressum from './views/Impressum.vue';
 import Datenschutz from './views/Datenschutz.vue';
 import Barrierefreiheit from './views/Barrierefreiheit.vue';
+import Contact from './views/Contact.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -65,6 +66,11 @@ const router = createRouter({
       path: '/accessibility',
       name: 'accessibility',
       component: Barrierefreiheit,
+    },
+            {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
     },
   ],
 });
