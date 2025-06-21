@@ -2,45 +2,17 @@
 import { useRoute } from 'vue-router';
 import { computed, ref, watch } from 'vue';
 import products from '../assets/data/productData.json';
+import { useCart } from '../composables/useCart';
 
 const route = useRoute();
 const productUrl = route.params.url;
+const product = computed(() => products.find(p => p.url === productUrl));
+const baseURL = import.meta.env.BASE_URL;
 
-const product = computed(() => products.find((p) => p.url === productUrl));
+const { addToCart } = useCart();
 
-// Cart logic
-const cart = ref([]);
-const CART_KEY = 'my-shop-cart';
-
-const loadCart = () => {
-  const stored = localStorage.getItem(CART_KEY);
-  if (stored) {
-    try {
-      cart.value = JSON.parse(stored);
-    } catch {
-      cart.value = [];
-    }
-  }
-};
-loadCart();
-
-watch(
-  cart,
-  (newCart) => {
-    localStorage.setItem(CART_KEY, JSON.stringify(newCart));
-  },
-  { deep: true }
-);
-
-function addToCart(product) {
-  if (!product) return;
-  const existing = cart.value.find((item) => item.url === product.url);
-  if (existing) {
-    existing.quantity++;
-  } else {
-    cart.value.push({ ...product, quantity: 1 });
-  }
-  alert(`${product.name} added to cart!`);
+function handleAdd() {
+  if (product.value) addToCart(product.value);
 }
 
 const formattedPrice = computed(() => {
@@ -53,7 +25,11 @@ const formattedPrice = computed(() => {
   <div v-if="product" class="product-page">
     <section class="product-main">
       <div class="product-image">
-        <img :src="product.image" :alt="product.imgAlt" />
+        <img 
+          :src="baseURL + product.image" 
+          :alt="product.imgAlt || product.name + ' Produktbild'" 
+          loading="lazy" 
+        />
       </div>
       <div class="product-details">
         <h1 class="product-name">{{ product.name }}</h1>
@@ -64,14 +40,18 @@ const formattedPrice = computed(() => {
         <p class="product-price">
           <strong>€ {{ formattedPrice }} (inkl. MwSt., zzgl. Versand)</strong>
         </p>
-        <button class="btn btn-primary" @click="addToCart(product)">
+        <button 
+          class="btn btn-primary" 
+          @click="handleAdd"
+          aria-label="Füge {{ product.name }} dem Warenkorb hinzu"
+        >
           In den Warenkorb
         </button>
       </div>
     </section>
 
-    <section class="product-ingredients">
-      <h2>Zutaten</h2>
+    <section class="product-ingredients" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Zutaten</h2>
       <div
         v-for="(ingredientsList, subcategory) in product.ingredients"
         :key="subcategory"
@@ -82,13 +62,13 @@ const formattedPrice = computed(() => {
       </div>
     </section>
 
-    <section class="product-allergens">
-      <h2>Allergene</h2>
+    <section class="product-allergens" aria-labelledby="allergens-heading">
+      <h2 id="allergens-heading">Allergene</h2>
       <p class="allergens-list">{{ product.allergens }}</p>
     </section>
 
-    <section class="product-nutrition">
-      <h2>Nährwertangaben (pro 100g)</h2>
+    <section class="product-nutrition" aria-labelledby="nutrition-heading">
+      <h2 id="nutrition-heading">Nährwertangaben (pro 100g)</h2>
       <div
         v-for="(info, label) in product.nutrition"
         :key="label"
@@ -98,16 +78,17 @@ const formattedPrice = computed(() => {
       </div>
     </section>
 
-    <section class="product-storage">
-      <h2>Lagerung</h2>
+    <section class="product-storage" aria-labelledby="storage-heading">
+      <h2 id="storage-heading">Lagerung</h2>
       <p class="storage-info">{{ product.storage }}</p>
     </section>
   </div>
 
-  <div v-else class="product-not-found">
+  <div v-else class="product-not-found" role="alert">
     <h1>Produkt nicht gefunden.</h1>
   </div>
 </template>
+
 
 <style scoped>
 
@@ -156,14 +137,15 @@ const formattedPrice = computed(() => {
 }
 
 .product-name {
-  font-size: 2.5rem;
-  color: var(--primary);
+  font-size: 4rem;
+  /* color: var(--primary); */
   margin-bottom: 0.25rem;
 }
 
 .product-slogan {
+  font-size: 1.2rem;
   font-style: italic;
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 600;
   margin-bottom: 1rem;
   display: block;
@@ -175,8 +157,8 @@ const formattedPrice = computed(() => {
 }
 
 .product-price {
-  color: var(--primary);
-  font-weight: 700;
+  color: var(--accent);
+  font-weight: 400;
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }

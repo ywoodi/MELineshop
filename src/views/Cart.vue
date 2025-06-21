@@ -1,48 +1,33 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { useCart } from '../composables/useCart';
 
-const cart = ref([])
+const { cart, removeFromCart, clearCart } = useCart();
 
-const CART_KEY = 'my-shop-cart'
-
-const loadCart = () => {
-  const stored = localStorage.getItem(CART_KEY)
-  if (stored) {
-    try {
-      cart.value = JSON.parse(stored)
-    } catch {
-      cart.value = []
-    }
-  }
-}
-loadCart()
-
-watch(cart, (newCart) => {
-  localStorage.setItem(CART_KEY, JSON.stringify(newCart))
-}, { deep: true })
-
-function removeFromCart(url) {
-  cart.value = cart.value.filter(item => item.url !== url)
-}
-
-function clearCart() {
-  cart.value = []
-}
 </script>
 
 <template>
   <section class="cart-container">
-    <h1 class="main-title">Your Cart</h1>
+    <h1>Your Cart</h1>
 
+    <!-- Show cart items -->
     <ul v-if="cart.length" class="cart-list">
       <li v-for="item in cart" :key="item.url" class="cart-item">
         <div class="item-info">
-          <span class="item-name">{{ item.name }}</span>
-          <span class="item-quantity">× {{ item.quantity }}</span>
-          <span class="item-price">{{ item.price }}</span>
+          <img class="img-small" :src="item.image" :alt="item.imgAlt" />
+          <div class="item-text">
+            <div class="name-qty">
+              <span class="item-name">{{ item.name }}</span>
+              <span class="item-quantity">× {{ item.quantity }}</span>
+            </div>
+            <span class="item-price">
+              Einzelpreis: €
+              {{ Number(item.price).toFixed(2).replace('.', ',') }} (inkl.
+              MwSt., zzgl. Versand)
+            </span>
+          </div>
         </div>
         <button
-          class="btn-secondary remove-btn"
+          class="btn btn-outline"
           type="button"
           :aria-label="`Remove ${item.name} from cart`"
           @click="removeFromCart(item.url)"
@@ -53,26 +38,36 @@ function clearCart() {
       </li>
     </ul>
 
-    <p v-else class="empty-message">Your cart is empty.</p>
+    <!-- Empty cart message -->
+    <div v-else>
+      <p class="empty-message">...is empty :(</p>
+      <router-link to="/products" class="btn btn-primary">
+        Browse our Products
+      </router-link>
+    </div>
 
+    <!-- Actions if cart has items -->
     <div v-if="cart.length" class="actions">
-      <button class="btn-secondary" @click="clearCart">
-        🗑 Clear Cart
-      </button>
-      <router-link to="/checkout" class="btn-primary">
+      <button class="btn btn-secondary" @click="clearCart">🗑 Clear Cart</button>
+      <router-link to="/checkout" class="btn btn-primary">
         Proceed to Checkout
       </router-link>
     </div>
   </section>
 </template>
 
+
 <style scoped>
-:root {
-  --text: #070c0b;
-  --background: #f6fafa;
-  --primary: #66ab9f;
-  --secondary: #cca4a3;
-  --accent: #b2ba82;
+.img-small {
+  width: 130px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 7px 0 0 7px;
+  flex-shrink: 0;
+}
+
+h1 {
+  margin-bottom: 2rem;
 }
 
 /* Screen-reader-only text */
@@ -88,20 +83,11 @@ function clearCart() {
 }
 
 .cart-container {
-  max-width: 600px;
+  width: 800px;
   margin: 2rem auto;
   padding: 1.5rem 2rem;
-  background: var(--background);
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.main-title {
-  text-align: center;
-  color: var(--text);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  font-size: 2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .cart-list {
@@ -118,76 +104,58 @@ function clearCart() {
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  padding: 0.75rem 1rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  border-radius: 7px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 0 0.75rem 0 0;
   transition: background-color 0.2s ease;
 }
 
 .cart-item:hover {
-  background: #eef7f5;
+  background: var(--secondary);
 }
 
 .item-info {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.name-qty {
+  display: flex;
   gap: 0.75rem;
-  font-size: 1rem;
-  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  align-items: baseline;
 }
 
 .item-name {
+  margin: 0;
   font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--accent);
 }
 
-.item-quantity,
-.item-price {
-  color: #555;
-}
-
-/* Buttons */
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: var(--background);
-  border: none;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background: var(--accent);
-  outline: 3px solid var(--primary);
-  outline-offset: 2px;
-}
-
-.btn-secondary {
-  background: var(--background);
-  border: 1px solid var(--primary);
+.item-quantity {
+  font-weight: 500;
   color: var(--text);
+  font-size: 1rem;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background: color-mix(in srgb, var(--primary) 10%, transparent);
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* Remove button */
-.remove-btn {
-  font-size: 1.25rem;
-  line-height: 1;
-  padding: 0.4rem 0.75rem;
+.item-price {
+  margin-top: 5px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1.1rem;
 }
 
 /* Actions row */
@@ -196,13 +164,5 @@ function clearCart() {
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 1.5rem;
-}
-
-/* Empty cart message */
-.empty-message {
-  text-align: center;
-  font-style: italic;
-  color: #888;
-  font-size: 1.1rem;
 }
 </style>

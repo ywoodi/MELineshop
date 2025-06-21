@@ -13,8 +13,9 @@ onMounted(async () => {
 
 
 <template>
-  <h1>Hello Products</h1>
-  <section class="product-grid">
+  <div class="container">
+  <h1>Unsere Produkte</h1>
+  <section class="product-grid" >
     <ProductCard
       v-for="product in products"
       :key="product.url"
@@ -26,6 +27,7 @@ onMounted(async () => {
       :url="product.url"
     />
   </section>
+  </div>
 </template>
 
 <style scoped>

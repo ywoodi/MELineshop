@@ -20,7 +20,7 @@
       "Salz": "0,3g"
     },
     "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 5 Tage haltbar.",
-    "image": "/src/assets/productImg/Schoko-Traum.jpg",
+    "image": "productImg/Schoko-Traum.webp",
     "imgAlt": "Anschnitt eines saftigen, dunklen Schokoladenkuchens mit mehreren Schichten, überzogen mit einer glänzenden Ganache und Schokoraspeln auf einem weißen Teller.",
     "url": "schoko-traum"
   },
@@ -45,7 +45,7 @@
       "Salz": "0,2g"
     },
     "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 4 Tage haltbar.",
-        "image": "/src/assets/productImg/Himbeer-Wolke.jpg",
+        "image": "productImg/Himbeer-Wolke.webp",
     "imgAlt": "Runde, helle Torte, reichlich garniert mit frischen Himbeeren. Ein Stück ist herausgeschnitten und zeigt die luftige Creme-Füllung.",
     "url": "himbeer-wolke"
   },
@@ -70,7 +70,7 @@
       "Salz": "0,4g"
     },
     "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 6 Tage haltbar.",
-        "image": "/src/assets/productImg/Karotten-Glueck.jpg",
+        "image": "productImg/Karotten-Glueck.webp",
     "imgAlt": "Ein Stück Karottenkuchen vor dem großen Kuchen, bedeckt mit einer dicken Schicht weißem Frosting und zerkleinerten Walnüssen. ",
     "url": "karotten-glueck"
   },
@@ -97,7 +97,7 @@
       "Salz": "0,2g"
     },
     "storage": "Unbedingt im Kühlschrank bei 2-5°C lagern. Nach Erhalt mindestens 4 Tage haltbar. Am besten gekühlt genießen.",
-        "image": "/src/assets/productImg/Zitronen-Frischekick.jpg",
+        "image": "productImg/Zitronen-Frischekick.webp",
     "imgAlt": "Goldgelbe Zitronentarte in einer runden Form mit einem knusprigen Rand und einer kunstvoll aufgespritzten, an den Spitzen gebräunten Baiserhaube.",
     "url": "zitronen-frischekick"
   },
@@ -122,7 +122,7 @@
     "Salz": "0,3g"
   },
   "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 4 Tage haltbar.",
-      "image": "/src/assets/productImg/Schwarzwälder-Kirsch-Zauber.jpg",
+      "image": "productImg/Schwarzwälder-Kirsch-Zauber.webp",
     "imgAlt": "Mehrschichtige, runde Schwarzwälder Kirschtorte mit dunklen Schokoböden, weißen Sahneschichten, eingelegten Kirschen und dunkler Schokoganache, sowie Kirschen oben drauf.",
   "url": "schwarzwalder-kirsch-zauber"
 },
@@ -147,7 +147,7 @@
     "Salz": "0,5g"
   },
   "storage": "Im Kühlschrank bei 4-7°C lagern. Nach Erhalt mindestens 6 Tage haltbar. Für das beste Geschmackserlebnis ca. 20 Minuten vor dem Verzehr aus dem Kühlschrank nehmen.",
-      "image": "/src/assets/productImg/Erdnuss-Schoko-Sinfonie.jpg",
+      "image": "productImg/Erdnuss-Schoko-Sinfonie.webp",
     "imgAlt": "Mehrschichtiger Kuchen mit dicken Schichten heller Erdnussbutter-Creme, garniert mit einer dunklen Schokoladenglasur und gerösteten Erdnüssen.",
   "url": "erdnuss-schoko-sinfonie"
 },
@@ -172,7 +172,7 @@
     "Salz": "0,1g"
   },
   "storage": "Unbedingt im Kühlschrank bei 2-5°C lagern. Nach Erhalt mindestens 5 Tage haltbar. Da es sich um eine Rohkosttorte handelt, ist sie besonders empfindlich gegenüber Wärme.",
-      "image": "/src/assets/productImg/Mango-Maracuja-Sommertraum.jpg",
+      "image": "productImg/Mango-Maracuja-Sommertraum.webp",
     "imgAlt": "Leuchtend gelbes Stück einer cremigen Mango-Torte auf einem dunklen Keksboden, garniert mit einem Sahnehäubchen.",
   "url": "mango-maracuja-sommertraum"
 },
@@ -197,7 +197,7 @@
     "Salz": "0,3g"
   },
   "storage": "Im Kühlschrank bei 4-7°C lagern. Nach Erhalt mindestens 6 Tage haltbar.",
-      "image": "/src/assets/productImg/Haselnuss-Mokka-Kuss.jpg",
+      "image": "productImg/Haselnuss-Mokka-Kuss.webp",
     "imgAlt": " Ein Stück Haselnuss-Mokka-Kuchen von hinten, mit dunkler Kaffeecreme, dekoriert mit ganzen Haselnüssen.",
   "url": "haselnuss-mokka-kuss"
 },
@@ -221,7 +221,7 @@
     "Salz": "0,2g"
   },
   "storage": "Kühl und trocken lagern. Nach Erhalt mindestens 5 Tage haltbar. Schmeckt am besten bei Raumtemperatur.",
-      "image": "/src/assets/productImg/Apfel-Streusel-Liebe.jpg",
+      "image": "productImg/Apfel-Streusel-Liebe.webp",
     "imgAlt": "Saftiger runder Apfelkuchen, angeschnitten, mit einer dicken, goldbraunen Decke aus knusprigen Streuseln. ",
   "url": "apfel-streusel-liebe"
 },
@@ -246,7 +246,7 @@
     "Salz": "0,3g"
   },
   "storage": "Im Kühlschrank bei 4-6°C lagern. Nach Erhalt mindestens 5 Tage haltbar.",
-      "image": "/src/assets/productImg/Pistazien-Rosen-Torte.jpg",
+      "image": "productImg/Pistazien-Rosen-Torte.webp",
     "imgAlt": "Eckige, helle Torte mit einem rechteckig herausgeschnittenen Tortenstück, verziert mit gehackten Pistazien und zarten rosa Rosenblättern.",
   "url": "pistazien-rosen-torte"
 }

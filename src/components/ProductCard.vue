@@ -1,4 +1,5 @@
 <script setup>
+import { useCart } from '../composables/useCart';
 
 const props = defineProps({
   name: String,
@@ -9,41 +10,54 @@ const props = defineProps({
   url: String
 });
 
+const baseURL = import.meta.env.BASE_URL;
 
+const { addToCart } = useCart(); // no need for showToast here
+
+function handleAdd() {
+  addToCart({
+    name: props.name,
+    slogan: props.slogan,
+    price: props.price,
+    image: props.image,
+    imgAlt: props.imgAlt,
+    url: props.url,
+    quantity: 1,
+  });
+}
 </script>
-
 
 <template>
   <article class="product-card">
     <img
       v-if="image"
-      :src="image"
-      :alt="imgAlt"
+      :src="baseURL + image"
+      :alt="imgAlt || 'Produktbild'"
       class="product-image"
-      
+      loading="lazy"
     />
     <div class="product-content">
       <h2 class="product-title">{{ name }}</h2>
       <p class="product-description">{{ slogan }}</p>
       <p class="product-price">€ {{ price }} (inkl. MwSt., zzgl. Versand)</p>
 
-      <div class="flex">
+      <div class="flex" role="group" :aria-label="`Aktionen für ${name}`">
         <router-link
           :to="{ name: 'product-view', params: { url } }"
           class="btn-secondary btn"
-          :aria-label="`View details for ${name}`"
+          :aria-label="`Details anzeigen für ${name}`"
         >
-          View Details
+          Details Anzeigen
         </router-link>
 
-        <button
-          class="btn btn-primary"
-          type="button"
-          :aria-label="`Add ${name} to cart`"
-        >
-          🛒 Add to Cart
-          <span class="sr-only">Add to cart</span>
-        </button>
+  <button
+    class="btn btn-primary"
+    type="button"
+    @click="handleAdd"
+    :aria-label="`Füge ${name} dem Warenkorb hinzu`"
+  >
+    🛒 In den Warenkorb
+  </button>
       </div>
     </div>
   </article>
@@ -52,11 +66,63 @@ const props = defineProps({
 
 
 <style scoped>
-.flex {
+.product-card {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  background-color: var(--background-light);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
 }
 
+.product-card:focus-within,
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  flex: 1 1 auto;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: auto; /* push price down to bottom of content area before buttons */
+}
+
+/* Button container */
+.product-content .flex {
+  display: flex;
+  gap: 8px;
+  margin-top: 1rem; /* consistent gap between price and buttons */
+}
+
+/* Buttons */
 .btn-primary {
   flex: 2 1 0%;
 }
@@ -76,53 +142,6 @@ const props = defineProps({
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-light);
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product-card:focus-within,
-.product-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
-.product-image {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.product-content {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.product-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin: 0;
-}
-
-.product-description {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.product-price {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--accent);
 }
 
 /* Reduce motion for accessibility */

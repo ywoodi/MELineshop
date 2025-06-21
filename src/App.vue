@@ -1,6 +1,12 @@
 <script setup>
 import { useRouter } from 'vue-router';
 
+import { useCart } from './composables/useCart';
+import Toast from './components/Toast.vue';
+
+const { showToast, toastMessage } = useCart();
+
+
 const router = useRouter();
 function navigateTo(path) {
   router.push(path);
@@ -41,6 +47,8 @@ function navigateTo(path) {
 
   <main class="container" id="content">
     <router-view />
+  <Toast :show="showToast" :message="toastMessage" />
+
   </main>
 
   <footer>

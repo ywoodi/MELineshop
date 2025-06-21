@@ -5,7 +5,7 @@
       Wir freuen uns, von Ihnen zu hören! Ob Sie eine Frage zu unseren Kuchen haben, eine spezielle Anfrage stellen möchten oder uns einfach nur Feedback geben wollen – hier sind Sie richtig. Wir bemühen uns, alle Anfragen so schnell wie möglich zu beantworten.
     </p>
 
-    <section class="contact-form-section">
+    <section>
       <h2>Kontaktformular</h2>
       <p>Nutzen Sie gerne unser Kontaktformular für eine schnelle und unkomplizierte Nachricht.</p>
       <form @submit.prevent="submitForm" novalidate>
@@ -60,7 +60,7 @@
           />
           <label for="privacy">
             Ich habe die
-            <a href="/datenschutzerklaerung" target="_blank" rel="noopener">Datenschutzerklärung</a>
+            <a href="/MELineshop/dataprotection" target="_blank" rel="noopener">Datenschutzerklärung</a>
             gelesen und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
           </label>
           <span v-if="errors.privacyAccepted" class="error-msg">
@@ -72,20 +72,19 @@
       </form>
     </section>
 
-    <section class="other-contacts">
+    <section>
       <h2>Weitere Kontaktmöglichkeiten</h2>
-      <p>Sie können uns auch direkt erreichen:</p>
       <ul>
         <li>
-          <strong>E-Mail:</strong> Für allgemeine Anfragen, Presse oder Kooperationen.
+          <strong>E-Mail:</strong>
           <a href="mailto:hello@veganakes.at">hello@veganakes.at</a>
         </li>
         <li>
-          <strong>Telefon:</strong> Für dringende Fragen zu einer bestehenden Bestellung.
+          <strong>Telefon:</strong>
           <a href="tel:+43732123456">+43 732 123456</a>
         </li>
         <li>
-          <strong>Anschrift:</strong> Unser Firmensitz (kein Verkauf vor Ort).<br />
+          <strong>Anschrift:</strong><br />
           VeganAkes e.U.<br />
           Domgasse 10<br />
           4020 Linz<br />
@@ -94,30 +93,22 @@
       </ul>
     </section>
 
-    <section class="office-hours">
+    <section>
       <h2>Erreichbarkeit</h2>
-      <p>Unsere Bürozeiten, in denen wir E-Mails und Anrufe beantworten, sind:</p>
       <ul>
         <li>Montag - Freitag: 09:00 - 17:00 Uhr</li>
         <li>Wochenenden & Feiertage: Geschlossen</li>
       </ul>
     </section>
 
-    <section class="social-media">
+    <section>
       <h2>Folgen Sie uns</h2>
-      <p>
-        Bleiben Sie auf dem Laufenden und entdecken Sie unsere neuesten Kreationen auf unseren Social-Media-Kanälen!
-      </p>
       <ul class="social-links">
         <li>
-          <a href="https://www.instagram.com/veganakes" target="_blank" rel="noopener" aria-label="Instagram">
-            Instagram
-          </a>
+          <a href="https://www.instagram.com/veganakes" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         </li>
         <li>
-          <a href="https://www.facebook.com/veganakes" target="_blank" rel="noopener" aria-label="Facebook">
-            Facebook
-          </a>
+          <a href="https://www.facebook.com/veganakes" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
         </li>
       </ul>
     </section>
@@ -141,7 +132,6 @@ export default {
   },
   methods: {
     validateEmail(email) {
-      // Simple email regex validation
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(email);
     },
@@ -155,7 +145,6 @@ export default {
 
       if (Object.keys(this.errors).length === 0) {
         alert("Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie möglich bei Ihnen melden.");
-        // Here you would normally send the form data to a server
         this.resetForm();
       }
     },
@@ -174,18 +163,35 @@ export default {
 </script>
 
 <style scoped>
-/* .contact-page {
-  max-width: 700px;
+main {
+  max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: Arial, sans-serif;
-  color: #333;
+  color: #222;
   line-height: 1.6;
 }
 
-h1,
+/* h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+} */
+
 h2 {
-  color: #2c3e50;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 0.5rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  color: #444;
 }
 
 form {
@@ -237,7 +243,7 @@ textarea.invalid {
 }
 
 button {
-  background-color: #2c3e50;
+  background-color: var(--primary);
   color: #fff;
   padding: 0.7rem 1.2rem;
   border: none;
@@ -251,15 +257,13 @@ button:hover {
   background-color: #1a2733;
 }
 
-.other-contacts ul,
-.office-hours ul,
-.social-links {
+ul {
   list-style: none;
   padding-left: 0;
+  color: #444;
 }
 
-.other-contacts li,
-.office-hours li {
+li {
   margin-bottom: 0.5rem;
 }
 
@@ -270,7 +274,7 @@ button:hover {
 }
 
 .social-links a {
-  color: #0066cc;
+  color: var(--accent);
   text-decoration: none;
   font-weight: bold;
 }
@@ -280,11 +284,26 @@ button:hover {
 }
 
 a {
-  color: #0066cc;
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--primary);
   text-decoration: underline;
-} */
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+}
 </style>

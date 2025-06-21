@@ -78,4 +78,76 @@ export default {
 </script>
 
 <style scoped>
+.impressum {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+} */
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 0.5rem;
+}
+
+em {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-style: italic;
+  font-weight: 500;
+}
+
+p {
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+address {
+  font-style: normal;
+  color: #444;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .impressum {
+    padding: 0 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+
 </style>

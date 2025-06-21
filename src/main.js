@@ -15,7 +15,7 @@ import Barrierefreiheit from './views/Barrierefreiheit.vue';
 import Contact from './views/Contact.vue';
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -73,6 +73,10 @@ const router = createRouter({
       component: Contact,
     },
   ],
+    scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
 });
 
 createApp(App).use(router).mount('#app');
