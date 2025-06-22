@@ -1,21 +1,25 @@
 <template>
-  <main class="impressum">
+  <main id="main-content" class="impressum">
     <h1>Impressum und Offenlegung</h1>
     <p><em>gem. §§ 24, 25 MedienG sowie Angaben gem. § 5 ECG</em></p>
 
-    <section>
-      <h2>Medieninhaber und Herausgeber</h2>
-      <p>VeganAkes e.U.<br />
-         Inhaberin: Sabrina Gabriel</p>
+    <section aria-labelledby="inhaber">
+      <h2 id="inhaber">Medieninhaber und Herausgeber</h2>
+      <p>
+        <strong>VeganAkes e.U.</strong><br />
+        Inhaberin: Sabrina Gabriel
+      </p>
     </section>
 
-    <section>
-      <h2>Unternehmensgegenstand</h2>
-      <p>Herstellung und Vertrieb von veganen und glutenfreien Backwaren (Konditorei (Zuckerbäckerei))</p>
+    <section aria-labelledby="unternehmensgegenstand">
+      <h2 id="unternehmensgegenstand">Unternehmensgegenstand</h2>
+      <p>
+        Herstellung und Vertrieb von veganen und glutenfreien Backwaren (Konditorei (Zuckerbäckerei))
+      </p>
     </section>
 
-    <section>
-      <h2>Anschrift</h2>
+    <section aria-labelledby="anschrift">
+      <h2 id="anschrift">Anschrift</h2>
       <address>
         Domgasse 10<br />
         4020 Linz<br />
@@ -23,17 +27,22 @@
       </address>
     </section>
 
-    <section>
-      <h2>Kontaktdaten</h2>
+    <section aria-labelledby="kontaktdaten">
+      <h2 id="kontaktdaten">Kontaktdaten</h2>
       <p>
-        Telefon: +43 732 123456<br />
-        E-Mail: <a href="mailto:hello@veganakes.at">hello@veganakes.at</a><br />
-        Website: <a href="https://www.veganakes.at" target="_blank" rel="noopener">www.veganakes.at</a>
+        Telefon: <a href="tel:+43732123456">+43 732 123456</a><br />
+        E-Mail: 
+        <a href="mailto:hello@veganakes.at">hello@veganakes.at</a><br />
+        Website: 
+        <a href="https://www.veganakes.at" target="_blank" rel="noopener" 
+           aria-label="Externe Website veganakes.at, öffnet in neuem Tab">
+          www.veganakes.at (öffnet in neuem Tab)
+        </a>
       </p>
     </section>
 
-    <section>
-      <h2>Firmenbuch- und Gewerbeinformationen</h2>
+    <section aria-labelledby="firmenbuch">
+      <h2 id="firmenbuch">Firmenbuch- und Gewerbeinformationen</h2>
       <p>
         Umsatzsteuer-Identifikationsnummer (UID-Nr.): ATU12345678<br />
         Firmenbuchnummer: FN 123456 a<br />
@@ -43,33 +52,43 @@
       </p>
     </section>
 
-    <section>
-      <h2>Anwendbare berufsrechtliche Vorschriften</h2>
+    <section aria-labelledby="vorschriften">
+      <h2 id="vorschriften">Anwendbare berufsrechtliche Vorschriften</h2>
       <p>
-        Österreichische Gewerbeordnung 1994 (GewO)<br />
-        Die geltenden Vorschriften sind über das Rechtsinformationssystem des Bundes (RIS) unter <a href="http://www.ris.bka.gv.at" target="_blank" rel="noopener">http://www.ris.bka.gv.at</a> abrufbar.
+        Österreichische Gewerbeordnung 1994 (GewO). Die geltenden Vorschriften sind über das 
+        <a href="http://www.ris.bka.gv.at" target="_blank" rel="noopener" 
+           aria-label="Rechtsinformationssystem des Bundes (RIS), öffnet in neuem Tab">
+          Rechtsinformationssystem des Bundes (RIS) (öffnet in neuem Tab)
+        </a> abrufbar.
       </p>
     </section>
 
-    <section>
-      <h2>Blattlinie gem. § 25 Abs. 4 MedienG</h2>
+    <section aria-labelledby="blattlinie">
+      <h2 id="blattlinie">Blattlinie gem. § 25 Abs. 4 MedienG</h2>
       <p>
-        Die Website dient der Präsentation und dem Vertrieb von veganen und glutenfreien Backwaren. Sie bietet Informationen zu den Produkten, zum Unternehmen sowie zur Förderung eines bewussten und genussvollen Lebensstils.
+        Die Website dient der Präsentation und dem Vertrieb von veganen und glutenfreien Backwaren.
+        Sie bietet Informationen zu den Produkten, zum Unternehmen sowie zur Förderung eines bewussten und genussvollen Lebensstils.
       </p>
     </section>
 
-    <section>
-      <h2>Online-Streitbeilegung</h2>
+    <section aria-labelledby="streitbeilegung">
+      <h2 id="streitbeilegung">Online-Streitbeilegung</h2>
       <p>
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter 
-        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a> finden. Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener"
+           aria-label="Plattform zur Online-Streitbeilegung der Europäischen Kommission, öffnet in neuem Tab">
+          Online-Streitbeilegungsplattform (öffnet in neuem Tab)
+        </a>.
+        Unsere E-Mail-Adresse finden Sie oben im Impressum.
       </p>
       <p>
-        Wir sind nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sind aber grundsätzlich dazu bereit.
+        Wir sind nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen,
+        sind aber grundsätzlich dazu bereit.
       </p>
     </section>
   </main>
 </template>
+
 
 <script>
 export default {

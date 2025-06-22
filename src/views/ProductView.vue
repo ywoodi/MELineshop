@@ -20,10 +20,9 @@ const formattedPrice = computed(() => {
   return Number(product.value.price).toFixed(2).replace('.', ',');
 });
 </script>
-
 <template>
   <div v-if="product" class="product-page">
-    <section class="product-main">
+    <section class="product-main" aria-labelledby="product-name">
       <div class="product-image">
         <img 
           :src="baseURL + product.image" 
@@ -32,7 +31,7 @@ const formattedPrice = computed(() => {
         />
       </div>
       <div class="product-details">
-        <h1 class="product-name">{{ product.name }}</h1>
+        <h1 id="product-name" class="product-name">{{ product.name }}</h1>
         <p class="product-slogan">
           <em>{{ product.slogan }}</em>
         </p>
@@ -43,7 +42,7 @@ const formattedPrice = computed(() => {
         <button 
           class="btn btn-primary" 
           @click="handleAdd"
-          aria-label="Füge {{ product.name }} dem Warenkorb hinzu"
+          :aria-label="`Füge ${product.name} dem Warenkorb hinzu`"
         >
           In den Warenkorb
         </button>
@@ -84,10 +83,11 @@ const formattedPrice = computed(() => {
     </section>
   </div>
 
-  <div v-else class="product-not-found" role="alert">
+  <div v-else class="product-not-found" role="alert" aria-live="assertive">
     <h1>Produkt nicht gefunden.</h1>
   </div>
 </template>
+
 
 
 <style scoped>

@@ -14,21 +14,27 @@ onMounted(async () => {
 
 <template>
   <div class="container">
-  <h1>Unsere Produkte</h1>
-  <section class="product-grid" >
-    <ProductCard
-      v-for="product in products"
-      :key="product.url"
-      :name="product.name"
-      :slogan="product.slogan"
-      :price="Number(product.price).toFixed(2).replace('.', ',')"
-      :image="product.image"
-      :imgAlt="product.imgAlt"
-      :url="product.url"
-    />
-  </section>
+    <h1 id="products-heading">Unsere Produkte</h1>
+    <section
+      class="product-grid"
+      role="list"
+      aria-labelledby="products-heading"
+    >
+      <ProductCard
+        v-for="product in products"
+        :key="product.url"
+        :name="product.name"
+        :slogan="product.slogan"
+        :price="Number(product.price).toFixed(2).replace('.', ',')"
+        :image="product.image"
+        :imgAlt="product.imgAlt"
+        :url="product.url"
+        role="listitem"
+      />
+    </section>
   </div>
 </template>
+
 
 <style scoped>
 

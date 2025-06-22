@@ -100,16 +100,16 @@ function applyPromo() {
   </section>
 
   <!-- Customer Information -->
-  <section>
+  <section class="cart-container">
     <h2>Customer Information</h2>
     <label>
       Full Name:
       <input v-model="customer.name" type="text" required />
-    </label>
+    </label> <br>
     <label>
       Email:
       <input v-model="customer.email" type="email" required />
-    </label>
+    </label> <br>
     <label>
       Phone:
       <input v-model="customer.phone" type="tel" />
@@ -117,85 +117,38 @@ function applyPromo() {
   </section>
 
   <!-- Shipping Information -->
-  <section>
+  <section class="cart-container">
     <h2>Shipping Address</h2>
     <label>
       Address Line 1:
       <input v-model="shipping.address1" type="text" required />
-    </label>
+    </label> <br>
     <label>
       Address Line 2:
       <input v-model="shipping.address2" type="text" />
-    </label>
+    </label><br>
     <label>
       City:
       <input v-model="shipping.city" type="text" required />
-    </label>
+    </label> <br>
     <label>
       State/Province:
       <input v-model="shipping.state" type="text" required />
-    </label>
+    </label><br>
     <label>
       Postal Code:
       <input v-model="shipping.postalCode" type="text" required />
-    </label>
+    </label> <br>
     <label>
       Country:
       <input v-model="shipping.country" type="text" required />
     </label>
-    <label>
-      Shipping Method:
-      <select v-model="shipping.method" required>
-        <option value="standard">Standard (5-7 days) - $5.00</option>
-        <option value="express">Express (2-3 days) - $15.00</option>
-        <option value="overnight">Overnight - $25.00</option>
-      </select>
-    </label>
+
   </section>
 
-  <!-- Payment Information -->
-  <section>
-    <h2>Payment Information</h2>
-    <label>
-      Card Number:
-      <input
-        v-model="payment.cardNumber"
-        type="text"
-        maxlength="19"
-        placeholder="1234 5678 9012 3456"
-        required
-      />
-    </label>
-    <label>
-      Expiration Date (MM/YY):
-      <input
-        v-model="payment.expiration"
-        type="text"
-        maxlength="5"
-        placeholder="MM/YY"
-        required
-      />
-    </label>
-    <label>
-      CVV:
-      <input v-model="payment.cvv" type="text" maxlength="4" required />
-    </label>
-    <label>
-      Name on Card:
-      <input v-model="payment.nameOnCard" type="text" required />
-    </label>
-  </section>
-
-  <!-- Promo Code -->
-  <section>
-    <h2>Promo Code</h2>
-    <input v-model="promoCode" type="text" placeholder="Enter promo code" />
-    <button type="button" class="btn btn-primary" @click="applyPromo">Apply</button>
-    <p v-if="promoMessage">{{ promoMessage }}</p>
-  </section>
 
   <!-- Terms and Conditions -->
-  <section>
+  <section class="cart-container">
     <label>
       <input type="checkbox" v-model="agreedToTerms" required />
       I agree to the <a href="#" target="_blank">terms and conditions</a>.
@@ -312,6 +265,27 @@ h1 {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: #000;
+}
+label, input {
+  margin: 0.5rem 0;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: #e74c3c;
+  background-color: #fdecea;
 }
 </style>
 

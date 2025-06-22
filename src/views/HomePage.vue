@@ -15,7 +15,7 @@
   </header>
 
   <!-- Intro Section -->
-  <section aria-labelledby="intro-heading" class="centered">
+  <section aria-labelledby="intro-heading" class="centered" role="region">
     <h2 id="intro-heading">Mit Herz und Verstand in Linz gebacken.</h2>
     <p>
       Wir verbinden traditionelles Konditorhandwerk mit rein pflanzlichen
@@ -43,7 +43,7 @@
   </section>
 
   <!-- About Section -->
-  <section aria-labelledby="about-heading" class="about-section">
+  <section aria-labelledby="about-heading" class="about-section" role="region">
     <h2 id="about-heading">Wer wir sind</h2>
     <div class="about-content">
       <img 
@@ -74,27 +74,27 @@
   </section>
 
   <!-- Testimonials Section -->
-<section aria-labelledby="testimonials-heading" class="centered" role="region">
-  <h2 id="testimonials-heading">Was unsere Kund:innen sagen</h2>
+  <section aria-labelledby="testimonials-heading" class="centered" role="region">
+    <h2 id="testimonials-heading">Was unsere Kund:innen sagen</h2>
 
-  <blockquote>
-    <p>
-      "Der beste Schokokuchen, den ich je gegessen habe — und er ist vegan!
-      Absolute Empfehlung."
-    </p>
-    <footer>— Maria K. aus Wien</footer>
-  </blockquote>
+    <blockquote>
+      <p>
+        "Der beste Schokokuchen, den ich je gegessen habe — und er ist vegan!
+        Absolute Empfehlung."
+      </p>
+      <footer>— Maria K. aus Wien</footer>
+    </blockquote>
 
-  <blockquote>
-    <p>
-      "Wunderschön und unglaublich lecker. Die Pistazien-Rosen-Torte war das
-      Highlight auf meiner Feier! Vielen Dank!"
-    </p>
-    <footer>— Thomas L. aus Linz</footer>
-  </blockquote>
-</section>
-
+    <blockquote>
+      <p>
+        "Wunderschön und unglaublich lecker. Die Pistazien-Rosen-Torte war das
+        Highlight auf meiner Feier! Vielen Dank!"
+      </p>
+      <footer>— Thomas L. aus Linz</footer>
+    </blockquote>
+  </section>
 </template>
+
 
 
 <style scoped>

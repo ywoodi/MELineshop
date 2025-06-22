@@ -1,36 +1,44 @@
 <template>
-  <main class="contact-page">
+  <main id="main-content" class="contact-page">
     <h1>Haben Sie Fragen oder Wünsche?</h1>
+
     <p>
       Wir freuen uns, von Ihnen zu hören! Ob Sie eine Frage zu unseren Kuchen haben, eine spezielle Anfrage stellen möchten oder uns einfach nur Feedback geben wollen – hier sind Sie richtig. Wir bemühen uns, alle Anfragen so schnell wie möglich zu beantworten.
     </p>
 
-    <section>
-      <h2>Kontaktformular</h2>
+    <section aria-labelledby="kontaktformular">
+      <h2 id="kontaktformular">Kontaktformular</h2>
       <p>Nutzen Sie gerne unser Kontaktformular für eine schnelle und unkomplizierte Nachricht.</p>
-      <form @submit.prevent="submitForm" novalidate>
+
+      <form @submit.prevent="submitForm" novalidate aria-describedby="form-description">
+        <p id="form-description" class="visually-hidden">Bitte füllen Sie alle Pflichtfelder aus. Pflichtfelder sind entsprechend gekennzeichnet.</p>
+
         <div class="form-group">
-          <label for="name">Ihr Name (Pflichtfeld)</label>
+          <label for="name">Ihr Name <span aria-hidden="true">*</span></label>
           <input
             id="name"
             type="text"
             v-model.trim="form.name"
             required
             :class="{ invalid: errors.name }"
+            aria-required="true"
+            :aria-invalid="errors.name ? 'true' : 'false'"
           />
-          <span v-if="errors.name" class="error-msg">Bitte geben Sie Ihren Namen ein.</span>
+          <span v-if="errors.name" class="error-msg" role="alert">Bitte geben Sie Ihren Namen ein.</span>
         </div>
 
         <div class="form-group">
-          <label for="email">Ihre E-Mail-Adresse (Pflichtfeld)</label>
+          <label for="email">Ihre E-Mail-Adresse <span aria-hidden="true">*</span></label>
           <input
             id="email"
             type="email"
             v-model.trim="form.email"
             required
             :class="{ invalid: errors.email }"
+            aria-required="true"
+            :aria-invalid="errors.email ? 'true' : 'false'"
           />
-          <span v-if="errors.email" class="error-msg">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+          <span v-if="errors.email" class="error-msg" role="alert">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
         </div>
 
         <div class="form-group">
@@ -39,15 +47,17 @@
         </div>
 
         <div class="form-group">
-          <label for="message">Ihre Nachricht (Pflichtfeld)</label>
+          <label for="message">Ihre Nachricht <span aria-hidden="true">*</span></label>
           <textarea
             id="message"
             rows="6"
             v-model.trim="form.message"
             required
             :class="{ invalid: errors.message }"
+            aria-required="true"
+            :aria-invalid="errors.message ? 'true' : 'false'"
           ></textarea>
-          <span v-if="errors.message" class="error-msg">Bitte geben Sie eine Nachricht ein.</span>
+          <span v-if="errors.message" class="error-msg" role="alert">Bitte geben Sie eine Nachricht ein.</span>
         </div>
 
         <div class="form-group checkbox-group">
@@ -57,13 +67,15 @@
             v-model="form.privacyAccepted"
             required
             :class="{ invalid: errors.privacyAccepted }"
+            aria-required="true"
+            :aria-invalid="errors.privacyAccepted ? 'true' : 'false'"
           />
           <label for="privacy">
             Ich habe die
-            <a href="/MELineshop/dataprotection" target="_blank" rel="noopener">Datenschutzerklärung</a>
+            <a href="/MELineshop/dataprotection" target="_blank" rel="noopener" aria-label="Link zur Datenschutzerklärung">Datenschutzerklärung</a>
             gelesen und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
           </label>
-          <span v-if="errors.privacyAccepted" class="error-msg">
+          <span v-if="errors.privacyAccepted" class="error-msg" role="alert">
             Bitte stimmen Sie der Datenschutzerklärung zu.
           </span>
         </div>
@@ -72,8 +84,8 @@
       </form>
     </section>
 
-    <section>
-      <h2>Weitere Kontaktmöglichkeiten</h2>
+    <section aria-labelledby="weitere-kontaktmoeglichkeiten">
+      <h2 id="weitere-kontaktmoeglichkeiten">Weitere Kontaktmöglichkeiten</h2>
       <ul>
         <li>
           <strong>E-Mail:</strong>
@@ -93,27 +105,28 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Erreichbarkeit</h2>
+    <section aria-labelledby="erreichbarkeit">
+      <h2 id="erreichbarkeit">Erreichbarkeit</h2>
       <ul>
         <li>Montag - Freitag: 09:00 - 17:00 Uhr</li>
-        <li>Wochenenden & Feiertage: Geschlossen</li>
+        <li>Wochenenden &amp; Feiertage: Geschlossen</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Folgen Sie uns</h2>
+    <section aria-labelledby="folgen-sie-uns">
+      <h2 id="folgen-sie-uns">Folgen Sie uns</h2>
       <ul class="social-links">
         <li>
-          <a href="https://www.instagram.com/veganakes" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://www.instagram.com/veganakes" target="_blank" rel="noopener" aria-label="Instagram-Profil von VeganAkes (externer Link)">Instagram</a>
         </li>
         <li>
-          <a href="https://www.facebook.com/veganakes" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          <a href="https://www.facebook.com/veganakes" target="_blank" rel="noopener" aria-label="Facebook-Seite von VeganAkes (externer Link)">Facebook</a>
         </li>
       </ul>
     </section>
   </main>
 </template>
+
 
 <script>
 export default {

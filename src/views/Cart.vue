@@ -6,18 +6,25 @@ const { cart, removeFromCart, clearCart } = useCart();
 </script>
 
 <template>
-  <section class="cart-container">
-    <h1>Your Cart</h1>
+  <section class="cart-container" aria-labelledby="cart-heading">
+    <h1 id="cart-heading">Your Cart</h1>
 
     <!-- Show cart items -->
-    <ul v-if="cart.length" class="cart-list">
-      <li v-for="item in cart" :key="item.url" class="cart-item">
+    <ul v-if="cart.length" class="cart-list" role="list">
+      <li v-for="item in cart" :key="item.url" class="cart-item" role="listitem">
         <div class="item-info">
-          <img class="img-small" :src="item.image" :alt="item.imgAlt" />
+          <img
+            class="img-small"
+            :src="item.image"
+            :alt="item.imgAlt"
+            loading="lazy"
+            width="80"
+            height="80"
+          />
           <div class="item-text">
             <div class="name-qty">
               <span class="item-name">{{ item.name }}</span>
-              <span class="item-quantity">× {{ item.quantity }}</span>
+              <span class="item-quantity" aria-label="Quantity">× {{ item.quantity }}</span>
             </div>
             <span class="item-price">
               Einzelpreis: €
@@ -40,21 +47,39 @@ const { cart, removeFromCart, clearCart } = useCart();
 
     <!-- Empty cart message -->
     <div v-else>
-      <p class="empty-message">...is empty :(</p>
-      <router-link to="/products" class="btn btn-primary">
+      <p class="empty-message" role="alert" aria-live="polite">...is empty :(</p>
+      <router-link
+        to="/products"
+        class="btn btn-primary"
+        role="link"
+        aria-label="Browse our Products"
+      >
         Browse our Products
       </router-link>
     </div>
 
     <!-- Actions if cart has items -->
     <div v-if="cart.length" class="actions">
-      <button class="btn btn-secondary" @click="clearCart">🗑 Clear Cart</button>
-      <router-link to="/checkout" class="btn btn-primary">
+      <button
+        class="btn btn-secondary"
+        type="button"
+        @click="clearCart"
+        aria-label="Clear all items from cart"
+      >
+        🗑 Clear Cart
+      </button>
+      <router-link
+        to="/checkout"
+        class="btn btn-primary"
+        role="link"
+        aria-label="Proceed to Checkout"
+      >
         Proceed to Checkout
       </router-link>
     </div>
   </section>
 </template>
+
 
 
 <style scoped>

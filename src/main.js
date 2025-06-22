@@ -13,6 +13,7 @@ import Impressum from './views/Impressum.vue';
 import Datenschutz from './views/Datenschutz.vue';
 import Barrierefreiheit from './views/Barrierefreiheit.vue';
 import Contact from './views/Contact.vue';
+import AGB from './views/AGB.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -71,6 +72,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact,
+    },
+                {
+      path: '/tos',
+      name: 'terms-of-service',
+      component: AGB,
     },
   ],
     scrollBehavior(to, from, savedPosition) {

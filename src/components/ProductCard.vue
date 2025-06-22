@@ -50,18 +50,19 @@ function handleAdd() {
           Details Anzeigen
         </router-link>
 
-  <button
-    class="btn btn-primary"
-    type="button"
-    @click="handleAdd"
-    :aria-label="`Füge ${name} dem Warenkorb hinzu`"
-  >
-    🛒 In den Warenkorb
-  </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          @click="handleAdd"
+          :aria-label="`Füge ${name} dem Warenkorb hinzu`"
+        >
+          🛒 In den Warenkorb
+        </button>
       </div>
     </div>
   </article>
 </template>
+
 
 
 
