@@ -1,10 +1,13 @@
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+
 import { computed, ref, watch } from 'vue';
 import products from '../assets/data/productData.json';
 import { useCart } from '../composables/useCart';
 
 const route = useRoute();
+const router = useRouter();
+
 const productUrl = route.params.url;
 const product = computed(() => products.find(p => p.url === productUrl));
 const baseURL = import.meta.env.BASE_URL;
@@ -19,8 +22,17 @@ const formattedPrice = computed(() => {
   if (!product.value || !product.value.price) return '';
   return Number(product.value.price).toFixed(2).replace('.', ',');
 });
+
+function goBack() {
+  router.back();
+}
+
 </script>
 <template>
+  <button @click="goBack" class="btn btn-secondary goBack" aria-label="Zurück zur vorherigen Seite">
+  &larr; Zurück
+</button>
+
   <div v-if="product" class="product-page">
     <section class="product-main" aria-labelledby="product-name">
       <div class="product-image">
@@ -91,6 +103,10 @@ const formattedPrice = computed(() => {
 
 
 <style scoped>
+.goBack {
+  margin: 0;
+}
+
 
 .btn {
   max-width: 200px;
@@ -100,7 +116,7 @@ const formattedPrice = computed(() => {
 .product-page {
   color: var(--text);
   margin: 0 auto;
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
 }
 
 .product-main {

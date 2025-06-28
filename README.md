@@ -1,24 +1,26 @@
-# MELineshop
-Welcome to our little Online Shop that got created as part of the MEL4SE LVA at FH OÖ Campus Hagenberg!
 
-Team Members:
-- Sabrina
-- Michaela
-- Elena
-- Lukas
-- Merve
-- Jana
+> Webshop (GitHub Pages)
+> https://ywoodi.github.io/MELineshop/#/
 
-As a little disclaimer: reloading a page isn't really meant to be happening, since the porject uses Vue's Client Site Routing, which isnt actually recognised by Github to be its own subpage! When finding yourself in a 404 Error Page by GitHub, consider reloading the Base URL of "https://ywoodi.github.io/MELineshop/" and starting over again!
+## Team Members:
+- Sabrina Gabriel s2310238028
+- Jana Autengruber s2210238003
+- Lukas Essig s2310238025
+- Elena Gewessler s2310238031
+- Michaela Holzmann s2310238040
+- Merve Karatas s2310238043
 
-Workload:
-Sabrina:
-- Project Manager
-- Most of the Content in the Pages
+## Local Setup if deployment fails
+Should for whatever reason GitHub Pages have trouble deploying the Page, here are the instructions for hosting locally via Docker Desktop:
+1. Install Docker Desktop
+2. Open the Terminal and locate a folder to put the Docker Container in
+3. execute command: `git clone https://github.com/rru-hgb/fhooe-hypernode-dock.git`
+4. change into directory (`cd fhooe-hypernode-dock`)
+5. execute command: `docker compose up -d`
+6. after the container is succesfully built, change directory to `fhooe-hypernode-dock/node`
+7. clone website repository `git clone https://github.com/ywoodi/MELineshop.git`
+8. open docker terminal via command `docker exec -it hypernode /bin/bash`
+9. change into directory `cd home/node/MELineshop`
+10. start local dev environment via command `npm run dev -- --host`
+11. the website should now run on port 5555 - open `http://localhost:5555`
 
-Michaela: 
-- Website Creation with Vue
-- Adding all the Content
-
-Elena:
-- Branding

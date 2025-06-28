@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 import Homepage from './views/HomePage.vue';
 import Products from './views/Products.vue';
 import ProductView from './views/ProductView.vue';
@@ -16,7 +16,8 @@ import Contact from './views/Contact.vue';
 import AGB from './views/AGB.vue';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -74,7 +75,7 @@ const router = createRouter({
       component: Contact,
     },
                 {
-      path: '/tos',
+      path: '/terms-of-service',
       name: 'terms-of-service',
       component: AGB,
     },

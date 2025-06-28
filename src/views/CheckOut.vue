@@ -52,112 +52,101 @@ const promoMessage = ref('')
 const agreedToTerms = ref(false)
 
 function applyPromo() {
-  // placeholder promo code logic
   if (promoCode.value.trim().toLowerCase() === 'save10') {
-    promoMessage.value = 'Promo code applied: 10% discount!'
+    promoMessage.value = 'Rabattcode eingelöst: 10% Rabatt!'
   } else {
-    promoMessage.value = 'Invalid promo code.'
+    promoMessage.value = 'Ungültiger Rabattcode.'
   }
 }
 </script>
 
 <template>
   <section class="cart-container">
-    <h1 class="title">Your Order Summary</h1>
+    <h1 class="title">Bestellübersicht</h1>
     <div v-if="cart.length" class="cart-content">
-      <!-- <ul class="cart-list">
+      <ul class="cart-list">
         <li v-for="item in cart" :key="item.url" class="cart-item">
-          <img class="img-small" :src="item.image" :alt="item.imgAlt" />
-          <span class="item-name">{{ item.name }}</span>
-          <span class="item-qty">x {{ item.quantity }}</span>
-          <span class="item-price">€{{ Number(item.price).toFixed(2) }}</span>
-        </li>
-      </ul> -->
-          <ul v-if="cart.length" class="cart-list">
-      <li v-for="item in cart" :key="item.url" class="cart-item">
-        <div class="item-info">
-          <img class="img-small" :src="item.image" :alt="item.imgAlt" />
-          <div class="item-text">
-            <div class="name-qty">
-              <span class="item-name">{{ item.name }}</span>
-              <span class="item-quantity">× {{ item.quantity }}</span>
+          <div class="item-info">
+            <img class="img-small" :src="item.image" :alt="item.imgAlt" />
+            <div class="item-text">
+              <div class="name-qty">
+                <span class="item-name">{{ item.name }}</span>
+                <span class="item-quantity">× {{ item.quantity }}</span>
+              </div>
+              <span class="item-price">
+                Einzelpreis: €
+                {{ Number(item.price).toFixed(2).replace('.', ',') }} (inkl.
+                MwSt., zzgl. Versand)
+              </span>
             </div>
-            <span class="item-price">
-              Einzelpreis: €
-              {{ Number(item.price).toFixed(2).replace('.', ',') }} (inkl.
-              MwSt., zzgl. Versand)
-            </span>
           </div>
-        </div>
-
-      </li>
-    </ul>
-      <p class="total">Total: <strong>€{{ totalPrice.toFixed(2) }}</strong></p>
+        </li>
+      </ul>
+      <p class="total">Gesamtsumme: <strong>€{{ totalPrice.toFixed(2).replace('.', ',') }}</strong></p>
     </div>
     <div v-else class="empty-message">
-      <p>Your cart is empty.</p>
+      <p>Dein Warenkorb ist leer.</p>
     </div>
   </section>
 
-  <!-- Customer Information -->
+  <!-- Kundendaten -->
   <section class="cart-container">
-    <h2>Customer Information</h2>
+    <h2>Kundendaten</h2>
     <label>
-      Full Name:
+      Vollständiger Name:
       <input v-model="customer.name" type="text" required />
     </label> <br>
     <label>
-      Email:
+      E-Mail:
       <input v-model="customer.email" type="email" required />
     </label> <br>
     <label>
-      Phone:
+      Telefon:
       <input v-model="customer.phone" type="tel" />
     </label>
   </section>
 
-  <!-- Shipping Information -->
+  <!-- Versanddaten -->
   <section class="cart-container">
-    <h2>Shipping Address</h2>
+    <h2>Lieferadresse</h2>
     <label>
-      Address Line 1:
+      Adresse (Zeile 1):
       <input v-model="shipping.address1" type="text" required />
     </label> <br>
     <label>
-      Address Line 2:
+      Adresse (Zeile 2):
       <input v-model="shipping.address2" type="text" />
     </label><br>
     <label>
-      City:
+      Stadt:
       <input v-model="shipping.city" type="text" required />
     </label> <br>
     <label>
-      State/Province:
+      Bundesland / Kanton:
       <input v-model="shipping.state" type="text" required />
     </label><br>
     <label>
-      Postal Code:
+      Postleitzahl:
       <input v-model="shipping.postalCode" type="text" required />
     </label> <br>
     <label>
-      Country:
+      Land:
       <input v-model="shipping.country" type="text" required />
     </label>
-
   </section>
 
-
-  <!-- Terms and Conditions -->
+  <!-- AGB Zustimmung -->
   <section class="cart-container">
     <label>
       <input type="checkbox" v-model="agreedToTerms" required />
-      I agree to the <a href="#" target="_blank">terms and conditions</a>.
+      Ich akzeptiere die <a href="/MELineshop/#/terms-of-service" target="_blank">Allgemeinen Geschäftsbedingungen</a>.
     </label>
   </section>
 
-  <!-- Submit -->
-  <button type="submit" class="btn btn-primary">Place Order</button>
+  <!-- Bestellen -->
+  <button type="submit" class="btn btn-primary">Bestellung abschließen</button>
 </template>
+
 
 <style scoped>
 .img-small {

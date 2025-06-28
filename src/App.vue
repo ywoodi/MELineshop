@@ -30,14 +30,14 @@ function navigateTo(path) {
         <ul class="nav-list">
           <li>
             <router-link to="/products" class="btn btn-nav"
-              >Products</router-link
+              >Produkte</router-link
             >
           </li>
           <li>
-            <router-link to="/cart" class="btn btn-nav">Cart</router-link>
+            <router-link to="/cart" class="btn btn-nav">Warenkorb</router-link>
           </li>
           <li>
-            <router-link to="/about" class="btn btn-nav">Über</router-link>
+            <router-link to="/about" class="btn btn-nav">Über uns</router-link>
           </li>
 
         </ul>

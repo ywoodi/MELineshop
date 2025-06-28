@@ -72,7 +72,7 @@
           />
           <label for="privacy">
             Ich habe die
-            <a href="/MELineshop/dataprotection" target="_blank" rel="noopener" aria-label="Link zur Datenschutzerklärung">Datenschutzerklärung</a>
+            <a href="/MELineshop/#/dataprotection" target="_blank" rel="noopener" aria-label="Link zur Datenschutzerklärung">Datenschutzerklärung</a>
             gelesen und stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
           </label>
           <span v-if="errors.privacyAccepted" class="error-msg" role="alert">

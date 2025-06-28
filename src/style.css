@@ -135,6 +135,7 @@ h1 {
 
 h3 {
   color: var(--primary);
+  margin: 0;
 }
 .img-shadow {
   filter: drop-shadow(3px 3px 3px #000);
@@ -155,11 +156,11 @@ h3 {
   border-radius: 6px;
   text-decoration: none;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 700;
   user-select: none;
 }
 

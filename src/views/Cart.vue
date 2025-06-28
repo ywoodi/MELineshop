@@ -7,7 +7,7 @@ const { cart, removeFromCart, clearCart } = useCart();
 
 <template>
   <section class="cart-container" aria-labelledby="cart-heading">
-    <h1 id="cart-heading">Your Cart</h1>
+    <h1 id="cart-heading">Dein Einkaufswagen</h1>
 
     <!-- Show cart items -->
     <ul v-if="cart.length" class="cart-list" role="list">
@@ -24,7 +24,7 @@ const { cart, removeFromCart, clearCart } = useCart();
           <div class="item-text">
             <div class="name-qty">
               <span class="item-name">{{ item.name }}</span>
-              <span class="item-quantity" aria-label="Quantity">× {{ item.quantity }}</span>
+              <span class="item-quantity" aria-label="Menge">× {{ item.quantity }}</span>
             </div>
             <span class="item-price">
               Einzelpreis: €
@@ -36,25 +36,25 @@ const { cart, removeFromCart, clearCart } = useCart();
         <button
           class="btn btn-outline"
           type="button"
-          :aria-label="`Remove ${item.name} from cart`"
+          :aria-label="`Produkt ${item.name} aus Warenkorb entfernen`"
           @click="removeFromCart(item.url)"
         >
           ✖
-          <span class="sr-only">Remove {{ item.name }}</span>
+          <span class="sr-only">Löschen {{ item.name }}</span>
         </button>
       </li>
     </ul>
 
     <!-- Empty cart message -->
     <div v-else>
-      <p class="empty-message" role="alert" aria-live="polite">...is empty :(</p>
+      <p class="empty-message" role="alert" aria-live="polite">...ist leer :(</p>
       <router-link
         to="/products"
         class="btn btn-primary"
         role="link"
-        aria-label="Browse our Products"
+        aria-label="Zu unseren Produkten"
       >
-        Browse our Products
+        Zu unseren Produkten
       </router-link>
     </div>
 
@@ -64,17 +64,17 @@ const { cart, removeFromCart, clearCart } = useCart();
         class="btn btn-secondary"
         type="button"
         @click="clearCart"
-        aria-label="Clear all items from cart"
+        aria-label="Alle Produkte aus dem Warenkorb löschen"
       >
-        🗑 Clear Cart
+        🗑 Warenkorb leeren
       </button>
       <router-link
         to="/checkout"
         class="btn btn-primary"
         role="link"
-        aria-label="Proceed to Checkout"
+        aria-label="Zur Kasse gehen und den Zahlungsvorgang starten"
       >
-        Proceed to Checkout
+        Zur Kasse gehen
       </router-link>
     </div>
   </section>
@@ -85,6 +85,7 @@ const { cart, removeFromCart, clearCart } = useCart();
 <style scoped>
 .img-small {
   width: 130px;
+  height: 130px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 7px 0 0 7px;
